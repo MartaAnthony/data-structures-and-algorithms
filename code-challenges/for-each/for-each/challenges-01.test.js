@@ -87,7 +87,17 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let newArr =[];
+  for(let i=0; i<arr.length; i++) {
+    if(i % 3 === 0){
+      newArr += 'fizz';
+    } else if (i % 5 === 0){
+      newArr += 'buzz';
+    } else if (!arr.length){
+      newArr +=1;
+    }
+  }
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
