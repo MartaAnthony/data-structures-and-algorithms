@@ -22,8 +22,10 @@ const createServer = () => {
 
 
 function sayHello(request, response){
-  // Solution code here...
+  response.status(200).send('Hello from the back-end');
 }
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
