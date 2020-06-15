@@ -22,8 +22,10 @@ const createServer = () => {
 
 
 function sayHello(request, response){
-  // Solution code here...
+  response.status(200).send('Hello from the back-end');
 }
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -50,7 +52,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  const newArr = arr.filter(str => str.match(/[aeiou]/g));
+  return newArr;
 };
 
 
@@ -63,7 +66,12 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  let newArr = arr.filter((num) => {
+    if (!forbiddenValues.includes(num)) {
+      return num;
+    }
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
