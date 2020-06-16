@@ -8,6 +8,7 @@ Write a function named greeting that takes in a string and returns the string in
 Then, write a function named speaker that takes in a string and a callback function. The speaker function should return the string in all uppercase letters only by invoking the callback.
 ------------------------------------------------------------------------------------------------ */
 
+
 const greeting = (word) => {
   return word.toUpperCase();
 };
@@ -87,19 +88,20 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  let newArr =[];
-  for(let i=0; i<arr.length; i++) {
-    if(i % 3 === 0){
-      newArr += 'fizz';
-    } else if (i % 5 === 0){
-      newArr += 'buzz';
-    } else if (!arr.length){
-      newArr +=1;
+  let newArr = [];
+  arr.forEach((num) => {
+    if (num % 3 === 0 && num % 5 === 0) {
+      newArr.push('Fizz Buzz');
+    } else if (num % 3 === 0) {
+      newArr.push('Fizz');
+    } else if (num % 5 === 0) {
+      newArr.push('Buzz');
+    } else {
+      newArr.push(num);
     }
-  }
+  });
   return newArr;
 };
-
 /* ------------------------------------------------------------------------------------------------
 TESTS
 

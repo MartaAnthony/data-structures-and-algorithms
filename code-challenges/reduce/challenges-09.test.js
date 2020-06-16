@@ -157,17 +157,15 @@ const currentEvents = {
       url: 'https://bgr.com/2020/04/13/coronavirus-mask-effectiveness-surgical-how-to/'
     }
   ]
-}
+};
 
 function getCurrentEvents(request, response){
-  mapCurrentEvents();
-  response.status(200).send(mapCurrentEvents);
+  response.send(mapCurrentEvents());
 }
 
 const mapCurrentEvents = () => {
-  let newArray = [];
-  newArray.push(currentEvents.news.map(value => newEvent (value)));
-  return newArray;
+  let eventsArray = currentEvents.news.map(value => new Event(value));
+  return eventsArray;
 };
 
 function Event(obj){
