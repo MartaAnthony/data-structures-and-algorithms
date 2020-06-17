@@ -37,7 +37,12 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
+  //not finished
   //establish an empty array to push the totals, start for loop, for the length you can reference <hours, declare a counter variable=0, second for loop: length of how many stores, set the counter=loop2 and loop1 index value (stores[j][i]), then push the counter to the first array; then return it
+  let totalsArr = [];
+  for (let i=0; i <= hoursOpen.length; i++){
+    (let j=0;  )
+  }
 
 };
 
