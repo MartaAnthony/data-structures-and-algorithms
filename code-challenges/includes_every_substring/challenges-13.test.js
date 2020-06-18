@@ -32,7 +32,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  arr.map(string => string.slice(0, 1));
+  // arr.map(string => string.slice(0, 1));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,7 +44,13 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  let newArr = [];
+  arr.reduce((accumulator, currentValue) => {
+    if (currentValue.includes(':)')) {
+      newArr.push(currentValue);
+    }
+    return newArr;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
